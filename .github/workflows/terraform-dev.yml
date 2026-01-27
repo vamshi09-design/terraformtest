@@ -37,7 +37,7 @@ jobs:
     name: Terraform Apply (Main)
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
-
+    environment: azure
     defaults:
       run:
         working-directory: environments/dev
