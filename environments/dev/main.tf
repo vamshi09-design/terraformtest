@@ -14,5 +14,6 @@ module "network" {
     "snet-dev-web" = "10.10.1.0/24"
     "snet-dev-app" = "10.10.2.0/24"
     "snet-dev-db"  = "10.10.3.0/24"
+    "snet-dev-db-09" = "10.20.4.0/24"
   }
 }
