@@ -55,6 +55,14 @@ jobs:
         with:
           terraform_version: 1.6.6
 
+      # 🔍 DEBUG STEP (SAFE – does NOT print secrets)
+      - name: Debug ARM environment variables
+        run: |
+          echo "ARM_CLIENT_ID set? -> ${ARM_CLIENT_ID:+YES}"
+          echo "ARM_CLIENT_SECRET set? -> ${ARM_CLIENT_SECRET:+YES}"
+          echo "ARM_TENANT_ID set? -> ${ARM_TENANT_ID:+YES}"
+          echo "ARM_SUBSCRIPTION_ID set? -> ${ARM_SUBSCRIPTION_ID:+YES}"
+
       - name: Terraform Init
         run: terraform init
 
