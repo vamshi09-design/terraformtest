@@ -72,6 +72,7 @@ jobs:
     name: Terraform Apply (release/* -> qa)
     if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/release/')
     runs-on: ubuntu-latest
+    environment: azure-qa
     defaults:
       run:
         working-directory: environments/qa
@@ -99,6 +100,7 @@ jobs:
     name: Terraform Apply (main -> prod)
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    environment: azure-prod
     defaults:
       run:
         working-directory: environments/prod
