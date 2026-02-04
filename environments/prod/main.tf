@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "network" {
-  name     = "rg-qa-eastus-network"
+  name     = "rg-prod-eastus-network"
   location = var.location
 }
 
